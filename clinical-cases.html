@@ -1,0 +1,765 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Клинические случаи - Олейникова Ю.А. | ЛОР-хирург Ростов-на-Дону</title>
+    <meta name="description" content="Реальные истории пациентов. Клинические случаи успешного лечения ЛОР-заболеваний. Обновляется регулярно.">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Nunito:wght@300;400;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --primary: #3FB0AC;
+            --secondary: #FAD089;
+            --accent: #173E43;
+            --bg-light: #F8F9FA;
+            --bg-white: #FFFFFF;
+            --text-dark: #2C3E50;
+            --text-light: #6C757D;
+            --border-light: #E9ECEF;
+            --success: #4CAF50;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        html {
+            scroll-behavior: smooth;
+        }
+        
+        body {
+            font-family: 'Nunito', sans-serif;
+            color: var(--text-dark);
+            line-height: 1.7;
+            overflow-x: hidden;
+            background: var(--bg-light);
+        }
+        
+        h1, h2, h3, h4 {
+            font-family: 'Playfair Display', serif;
+            font-weight: 700;
+            line-height: 1.3;
+        }
+        
+        /* Navigation */
+        .top-nav {
+            background: white;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            padding: 15px 20px;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        
+        .nav-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .nav-logo {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: var(--accent);
+            text-decoration: none;
+        }
+        
+        .nav-links {
+            display: flex;
+            gap: 25px;
+            align-items: center;
+        }
+        
+        .nav-links a {
+            color: var(--text-dark);
+            text-decoration: none;
+            font-weight: 600;
+            transition: color 0.3s ease;
+        }
+        
+        .nav-links a:hover {
+            color: var(--primary);
+        }
+        
+        .nav-cta {
+            background: var(--primary);
+            color: white !important;
+            padding: 10px 25px;
+            border-radius: 25px;
+            transition: all 0.3s ease;
+        }
+        
+        .nav-cta:hover {
+            background: var(--accent);
+            transform: translateY(-2px);
+        }
+        
+        /* Hero */
+        .page-hero {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--accent) 100%);
+            color: white;
+            padding: 60px 20px 40px;
+            text-align: center;
+        }
+        
+        .page-hero h1 {
+            font-size: clamp(2rem, 4vw, 3rem);
+            margin-bottom: 15px;
+        }
+        
+        .page-hero p {
+            font-size: 1.1rem;
+            max-width: 700px;
+            margin: 0 auto;
+            opacity: 0.95;
+        }
+        
+        /* Container */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* Filter Navigation */
+        .filter-nav {
+            background: white;
+            padding: 25px 20px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            margin-bottom: 40px;
+        }
+        
+        .filter-nav h3 {
+            font-size: 1.1rem;
+            color: var(--accent);
+            margin-bottom: 15px;
+            text-align: center;
+        }
+        
+        .filter-buttons {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            justify-content: center;
+        }
+        
+        .filter-btn {
+            padding: 10px 20px;
+            border: 2px solid var(--border-light);
+            background: white;
+            border-radius: 25px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-family: 'Nunito', sans-serif;
+            font-size: 0.95rem;
+            color: var(--text-dark);
+        }
+        
+        .filter-btn:hover {
+            border-color: var(--primary);
+            color: var(--primary);
+        }
+        
+        .filter-btn.active {
+            background: var(--primary);
+            color: white;
+            border-color: var(--primary);
+        }
+        
+        /* Cases Feed */
+        .cases-feed {
+            padding: 40px 20px 80px;
+        }
+        
+        .case-item {
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            margin-bottom: 30px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+            transition: all 0.3s ease;
+        }
+        
+        .case-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(63, 176, 172, 0.15);
+        }
+        
+        .case-header {
+            padding: 25px 30px;
+            border-bottom: 1px solid var(--border-light);
+        }
+        
+        .case-meta {
+            display: flex;
+            gap: 15px;
+            align-items: center;
+            margin-bottom: 12px;
+            flex-wrap: wrap;
+        }
+        
+        .case-date {
+            color: var(--text-light);
+            font-size: 0.9rem;
+        }
+        
+        .case-category {
+            background: var(--primary);
+            color: white;
+            padding: 4px 12px;
+            border-radius: 12px;
+            font-size: 0.85rem;
+            font-weight: 600;
+        }
+        
+        .case-title-main {
+            font-size: 1.6rem;
+            color: var(--accent);
+            margin-bottom: 8px;
+        }
+        
+        .case-diagnosis {
+            color: var(--text-light);
+            font-size: 1rem;
+        }
+        
+        .case-body {
+            padding: 30px;
+        }
+        
+        .case-content p {
+            margin-bottom: 15px;
+            color: var(--text-dark);
+            line-height: 1.8;
+        }
+        
+        .case-content h4 {
+            color: var(--primary);
+            font-size: 1.15rem;
+            margin: 25px 0 12px;
+        }
+        
+        .case-content ul {
+            list-style: none;
+            padding: 0;
+            margin: 15px 0;
+        }
+        
+        .case-content li {
+            padding: 8px 0 8px 25px;
+            position: relative;
+            color: var(--text-dark);
+        }
+        
+        .case-content li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: var(--success);
+            font-weight: bold;
+        }
+        
+        .case-images {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 15px;
+            margin: 25px 0;
+        }
+        
+        .case-image-placeholder {
+            width: 100%;
+            height: 200px;
+            background: linear-gradient(135deg, rgba(63, 176, 172, 0.1), rgba(250, 208, 137, 0.1));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--text-light);
+            font-size: 0.9rem;
+            border-radius: 10px;
+            border: 2px dashed var(--border-light);
+            text-align: center;
+            padding: 20px;
+        }
+        
+        .patient-quote {
+            background: var(--bg-light);
+            padding: 20px 25px;
+            border-left: 4px solid var(--secondary);
+            border-radius: 8px;
+            margin: 25px 0;
+            font-style: italic;
+            color: var(--text-dark);
+        }
+        
+        .patient-quote::before {
+            content: '"';
+            font-size: 3rem;
+            color: var(--secondary);
+            line-height: 0;
+            position: relative;
+            top: 20px;
+            opacity: 0.5;
+        }
+        
+        .result-badge {
+            display: inline-block;
+            background: var(--success);
+            color: white;
+            padding: 8px 20px;
+            border-radius: 20px;
+            font-weight: 600;
+            font-size: 0.9rem;
+            margin-top: 15px;
+        }
+        
+        /* Empty State */
+        .empty-state {
+            text-align: center;
+            padding: 80px 20px;
+            color: var(--text-light);
+        }
+        
+        .empty-state h3 {
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+            color: var(--text-dark);
+        }
+        
+        /* Footer */
+        footer {
+            background: var(--accent);
+            color: white;
+            padding: 40px 20px 20px;
+            text-align: center;
+        }
+        
+        footer p {
+            color: rgba(255,255,255,0.8);
+        }
+        
+        footer a {
+            color: var(--secondary);
+            text-decoration: none;
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            .nav-links {
+                gap: 15px;
+                font-size: 0.9rem;
+            }
+            
+            .nav-cta {
+                padding: 8px 20px;
+            }
+            
+            .filter-buttons {
+                gap: 8px;
+            }
+            
+            .filter-btn {
+                padding: 8px 16px;
+                font-size: 0.85rem;
+            }
+            
+            .case-header {
+                padding: 20px;
+            }
+            
+            .case-body {
+                padding: 20px;
+            }
+            
+            .case-title-main {
+                font-size: 1.3rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="top-nav">
+        <div class="nav-content">
+            <a href="index.html" class="nav-logo">Олейникова Ю.А.</a>
+            <div class="nav-links">
+                <a href="index.html#services">Услуги</a>
+                <a href="index.html#about">Обо мне</a>
+                <a href="index.html#contact" class="nav-cta">Записаться</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <section class="page-hero">
+        <div class="container">
+            <h1>Клинические случаи</h1>
+            <p>Реальные истории успешного лечения. Обновляется регулярно</p>
+        </div>
+    </section>
+
+    <!-- Filter Navigation -->
+    <div class="filter-nav">
+        <div class="container">
+            <h3>Фильтр по заболеваниям:</h3>
+            <div class="filter-buttons">
+                <button class="filter-btn active" data-category="all">Все случаи</button>
+                <button class="filter-btn" data-category="sinusit">Синуситы</button>
+                <button class="filter-btn" data-category="septoplastika">Искривление перегородки</button>
+                <button class="filter-btn" data-category="rinit">Вазомоторный ринит</button>
+                <button class="filter-btn" data-category="hrap">Храп и апноэ</button>
+                <button class="filter-btn" data-category="polipy">Полипы носа</button>
+                <button class="filter-btn" data-category="other">Другие</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Cases Feed -->
+    <section class="cases-feed">
+        <div class="container">
+            <div id="casesFeed">
+                
+                <!-- Case 1 -->
+                <article class="case-item" data-category="sinusit">
+                    <div class="case-header">
+                        <div class="case-meta">
+                            <span class="case-date">📅 Февраль 2026</span>
+                            <span class="case-category">Одонтогенный гайморит</span>
+                        </div>
+                        <h2 class="case-title-main">Пациент, 45 лет</h2>
+                        <p class="case-diagnosis">Диагноз: Киста зуба с прорывом в гайморову пазуху, хронический одонтогенный гайморит</p>
+                    </div>
+                    <div class="case-body">
+                        <div class="case-content">
+                            <p>
+                                Пациент обратился с жалобами на постоянную боль в области верхней челюсти, 
+                                гнойные выделения из носа, головные боли. Симптомы беспокоили несколько месяцев. 
+                                В другой клинике предлагали лечить соседний зуб, где проблем не было.
+                            </p>
+                            
+                            <h4>Диагностика</h4>
+                            <p>
+                                При обследовании выявлена киста корня зуба, которая пробила дно гайморовой пазухи 
+                                и вызвала хроническое воспаление. Требовалось комплексное лечение — 
+                                удаление зуба с кистой и санация пазухи.
+                            </p>
+                            
+                            <div class="case-images">
+                                <div class="case-image-placeholder">КТ: Киста зуба с прорывом в пазуху</div>
+                                <div class="case-image-placeholder">Послеоперационный контроль</div>
+                            </div>
+                            
+                            <h4>Лечение</h4>
+                            <p>
+                                Проведена комплексная операция в один этап: удаление причинного зуба с кистой 
+                                совместно со стоматологом-хирургом и эндоскопическая санация гайморовой пазухи. 
+                                Максимально удобно для пациента — все проблемы решены за одну операцию.
+                            </p>
+                            
+                            <h4>Результат</h4>
+                            <ul>
+                                <li>Операция выполнена успешно, пациент выписан на следующий день</li>
+                                <li>Полное восстановление носового дыхания</li>
+                                <li>Исчезновение болей и гнойных выделений</li>
+                                <li>Возврат к обычной жизни через неделю</li>
+                            </ul>
+                            <span class="result-badge">✓ Успешно вылечен</span>
+                            
+                            <div class="patient-quote">
+                                Юлия Александровна чётко объяснила проблему и как её решить. Сегодня сделали — завтра выписали. 
+                                Сразу убрали и зуб с кистой, и решили проблему с пазухой. Максимально удобно! 
+                                Рекомендую этого специалиста как мастера своего дела!
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Case 2 -->
+                <article class="case-item" data-category="sinusit">
+                    <div class="case-header">
+                        <div class="case-meta">
+                            <span class="case-date">📅 Январь 2026</span>
+                            <span class="case-category">Хронический гайморит</span>
+                        </div>
+                        <h2 class="case-title-main">Пациентка, 38 лет</h2>
+                        <p class="case-diagnosis">Диагноз: Хронический рецидивирующий гайморит на фоне стоматологических проблем</p>
+                    </div>
+                    <div class="case-body">
+                        <div class="case-content">
+                            <p>
+                                После длительного лечения зубов (потеряла два зуба) появилась боль в области лица. 
+                                Невролог связала это с тройничным нервом. МРТ показала гайморит. 
+                                В течение 1,5 лет множество врачей не могли вылечить заболевание.
+                            </p>
+                            
+                            <h4>Проблема</h4>
+                            <p>
+                                Хронический рецидивирующий гайморит. Постоянные обострения, головные боли, заложенность носа. 
+                                Консервативное лечение давало лишь временное облегчение. 
+                                Истинная причина — одонтогенная инфекция — не была выявлена.
+                            </p>
+                            
+                            <div class="case-images">
+                                <div class="case-image-placeholder">МРТ: Затемнение гайморовой пазухи</div>
+                                <div class="case-image-placeholder">Эндоскопия до операции</div>
+                            </div>
+                            
+                            <h4>Лечение</h4>
+                            <p>
+                                Выявлена и устранена истинная причина — одонтогенная инфекция. 
+                                Проведена эндоскопическая гайморотомия с санацией пазухи, 
+                                восстановлено естественное соустье для нормального дренажа.
+                            </p>
+                            
+                            <h4>Результат</h4>
+                            <ul>
+                                <li>Полное излечение хронического гайморита</li>
+                                <li>Исчезновение головных болей</li>
+                                <li>Восстановление носового дыхания</li>
+                                <li>Отсутствие рецидивов на протяжении года наблюдения</li>
+                            </ul>
+                            <span class="result-badge">✓ Полное выздоровление</span>
+                            
+                            <div class="patient-quote">
+                                После огромного числа врачей, которые так и не смогли оказать мне помощь, 
+                                Юлия Александровна меня спасла. Она первая разобралась в истинной причине моей проблемы. 
+                                Спасибо Вам огромное!
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Case 3 -->
+                <article class="case-item" data-category="septoplastika">
+                    <div class="case-header">
+                        <div class="case-meta">
+                            <span class="case-date">📅 Декабрь 2025</span>
+                            <span class="case-category">Искривление перегородки</span>
+                        </div>
+                        <h2 class="case-title-main">Пациентка, 42 года</h2>
+                        <p class="case-diagnosis">Диагноз: Выраженное искривление носовой перегородки, полипозный риносинусит</p>
+                    </div>
+                    <div class="case-body">
+                        <div class="case-content">
+                            <p>
+                                Женщина годами не могла дышать носом. Постоянные головные боли, 
+                                полное отсутствие обоняния, хронические синуситы. 
+                                Много лет безуспешных попыток лечения у разных специалистов.
+                            </p>
+                            
+                            <h4>Диагностика</h4>
+                            <p>
+                                Комплексное обследование выявило: выраженное искривление носовой перегородки, 
+                                гипертрофию носовых раковин, хронический полипозный риносинусит. 
+                                Требовалось многоэтапное хирургическое лечение.
+                            </p>
+                            
+                            <div class="case-images">
+                                <div class="case-image-placeholder">КТ: Искривление перегородки</div>
+                                <div class="case-image-placeholder">Эндоскопия: полипы</div>
+                                <div class="case-image-placeholder">Результат операции</div>
+                            </div>
+                            
+                            <h4>Хирургическое лечение</h4>
+                            <p>
+                                Комплексная операция: септопластика, вазотомия нижних носовых раковин, 
+                                эндоскопическая полипотомия, санация околоносовых пазух. 
+                                Использованы современные малотравматичные методики.
+                            </p>
+                            
+                            <h4>Результат</h4>
+                            <ul>
+                                <li>Полное восстановление носового дыхания впервые за много лет</li>
+                                <li>Исчезновение головных болей</li>
+                                <li>Возвращение обоняния</li>
+                                <li>Нормализация сна и общего самочувствия</li>
+                            </ul>
+                            <span class="result-badge">✓ Жизнь изменилась</span>
+                            
+                            <div class="patient-quote">
+                                Юлия Александровна, вы подарили мне носовое дыхание, которого просто не было! 
+                                Были бесконечные головные боли, полное отсутствие носового дыхания, синуситы, 
+                                отсутствие запахов... Вы вернули меня к полноценной жизни! Врач от Бога!
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Case 4 -->
+                <article class="case-item" data-category="rinit">
+                    <div class="case-header">
+                        <div class="case-meta">
+                            <span class="case-date">📅 Ноябрь 2025</span>
+                            <span class="case-category">Медикаментозный ринит</span>
+                        </div>
+                        <h2 class="case-title-main">Пациентка, 29 лет</h2>
+                        <p class="case-diagnosis">Диагноз: Медикаментозный ринит, зависимость от сосудосуживающих капель</p>
+                    </div>
+                    <div class="case-body">
+                        <div class="case-content">
+                            <p>
+                                Целый год не могла дышать носом без сосудосуживающих капель. 
+                                Развилась полная зависимость — без капель нос совершенно не дышал. 
+                                Эффект от капель становился всё короче, приходилось капать каждые 2-3 часа.
+                            </p>
+                            
+                            <h4>Диагноз</h4>
+                            <p>
+                                Медикаментозный ринит с выраженной гипертрофией нижних носовых раковин. 
+                                Слизистая оболочка гипертрофирована, сосуды не реагируют на естественную регуляцию. 
+                                Консервативное лечение в данной ситуации уже неэффективно.
+                            </p>
+                            
+                            <div class="case-images">
+                                <div class="case-image-placeholder">Эндоскопия: гипертрофия до операции</div>
+                                <div class="case-image-placeholder">Состояние после вазотомии</div>
+                            </div>
+                            
+                            <h4>Лечение</h4>
+                            <p>
+                                Выполнена подслизистая вазотомия нижних носовых раковин современным радиоволновым методом. 
+                                Операция проведена амбулаторно под местной анестезией, без тампонов. 
+                                Длительность — 20 минут.
+                            </p>
+                            
+                            <h4>Результат</h4>
+                            <ul>
+                                <li>Полный отказ от сосудосуживающих капель</li>
+                                <li>Восстановление свободного носового дыхания через 5 дней</li>
+                                <li>Нормализация сна, исчезновение храпа</li>
+                                <li>Возврат к работе через 3 дня</li>
+                            </ul>
+                            <span class="result-badge">✓ Избавление от зависимости</span>
+                            
+                            <div class="patient-quote">
+                                Год мучений закончился! Юлия Александровна освободила меня от капель. 
+                                Операция прошла быстро и почти безболезненно. Уже через неделю я свободно дышала носом 
+                                без всяких капель. Спасибо огромное!
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Case 5 -->
+                <article class="case-item" data-category="other">
+                    <div class="case-header">
+                        <div class="case-meta">
+                            <span class="case-date">📅 Октябрь 2025</span>
+                            <span class="case-category">Новообразование</span>
+                        </div>
+                        <h2 class="case-title-main">Пациентка, 51 год</h2>
+                        <p class="case-diagnosis">Диагноз: Доброкачественная опухоль полости носа</p>
+                    </div>
+                    <div class="case-body">
+                        <div class="case-content">
+                            <p>
+                                Пациентка из Волгодонска 5 лет лечилась от хронических гайморитов и фронтитов. 
+                                Лечение не помогало. После обследования в онкоцентре направлена к ЛОР-врачу. 
+                                Истинная причина — доброкачественное образование в носу — не была выявлена годами.
+                            </p>
+                            
+                            <h4>Диагностика</h4>
+                            <p>
+                                При эндоскопическом обследовании обнаружена объёмная доброкачественная опухоль, 
+                                которая блокировала соустья пазух и вызывала рецидивирующие синуситы. 
+                                КТ подтвердила распространённость процесса.
+                            </p>
+                            
+                            <div class="case-images">
+                                <div class="case-image-placeholder">КТ: Образование в полости носа</div>
+                                <div class="case-image-placeholder">Эндоскопия: опухоль</div>
+                                <div class="case-image-placeholder">Гистология: доброкачественная</div>
+                            </div>
+                            
+                            <h4>Операция</h4>
+                            <p>
+                                Проведена эндоскопическая операция по удалению новообразования с гистологическим исследованием. 
+                                Опухоль удалена полностью в пределах здоровых тканей. 
+                                Гистология подтвердила доброкачественный характер.
+                            </p>
+                            
+                            <h4>Результат</h4>
+                            <ul>
+                                <li>Образование удалено полностью</li>
+                                <li>Восстановлена проходимость носовых ходов</li>
+                                <li>Прекратились рецидивирующие синуситы</li>
+                                <li>Наблюдение 2 года — рецидива нет</li>
+                            </ul>
+                            <span class="result-badge">✓ Опухоль удалена</span>
+                            
+                            <div class="patient-quote">
+                                Прошла семь кругов ада, дойдя до онкоцентра. В моем городе помочь мне никто не мог. 
+                                Посоветовали Олейникову Ю.А. И как я благодарна, что попала к врачу от Бога! 
+                                Спасибо за проведенную операцию, за поддержку!
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+            </div>
+            
+            <!-- Empty State -->
+            <div id="emptyState" class="empty-state" style="display: none;">
+                <h3>Случаев не найдено</h3>
+                <p>Попробуйте выбрать другую категорию</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p><strong>Олейникова Юлия Александровна</strong> | ЛОР-хирург</p>
+            <p>МЦ «Гиппократ 21 век», Ростов-на-Дону, 13-я Линия, д. 8</p>
+            <p>Телефон: <a href="tel:+78633339179">+7 (863) 333-91-79</a></p>
+            <p style="margin-top: 20px;">&copy; 2026 Все права защищены</p>
+        </div>
+    </footer>
+
+    <script>
+        // Фильтрация клинических случаев
+        const filterButtons = document.querySelectorAll('.filter-btn');
+        const caseItems = document.querySelectorAll('.case-item');
+        const emptyState = document.getElementById('emptyState');
+        
+        filterButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                filterButtons.forEach(btn => btn.classList.remove('active'));
+                button.classList.add('active');
+                
+                const category = button.dataset.category;
+                let visibleCount = 0;
+                
+                caseItems.forEach(item => {
+                    if (category === 'all' || item.dataset.category === category) {
+                        item.style.display = 'block';
+                        visibleCount++;
+                    } else {
+                        item.style.display = 'none';
+                    }
+                });
+                
+                emptyState.style.display = visibleCount === 0 ? 'block' : 'none';
+            });
+        });
+        
+        // Плавная прокрутка к началу ленты при фильтрации
+        filterButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                const feedTop = document.querySelector('.cases-feed').offsetTop - 100;
+                window.scrollTo({ top: feedTop, behavior: 'smooth' });
+            });
+        });
+    </script>
+</body>
+</html>
