@@ -1,0 +1,955 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ЛОР-стоматология - одонтогенный риносинусит | Олейникова Ю.А.</title>
+    <meta name="description" content="Комплексное лечение одонтогенного риносинусита в Ростове-на-Дону. Совместная работа ЛОР-хирурга и стоматолога для полного излечения.">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Nunito:wght@300;400;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --primary: #3FB0AC;
+            --secondary: #FAD089;
+            --accent: #173E43;
+            --bg-light: #F8F9FA;
+            --bg-white: #FFFFFF;
+            --text-dark: #2C3E50;
+            --text-light: #6C757D;
+            --border-light: #E9ECEF;
+            --success: #4CAF50;
+            --warning: #FF9800;
+            --danger: #F44336;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        html {
+            scroll-behavior: smooth;
+        }
+        
+        body {
+            font-family: 'Nunito', sans-serif;
+            color: var(--text-dark);
+            line-height: 1.7;
+            overflow-x: hidden;
+        }
+        
+        h1, h2, h3, h4 {
+            font-family: 'Playfair Display', serif;
+            font-weight: 700;
+            line-height: 1.3;
+        }
+        
+        /* Navigation */
+        .top-nav {
+            background: white;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            padding: 15px 20px;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        
+        .nav-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .nav-logo {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: var(--accent);
+            text-decoration: none;
+        }
+        
+        .nav-links {
+            display: flex;
+            gap: 25px;
+            align-items: center;
+        }
+        
+        .nav-links a {
+            color: var(--text-dark);
+            text-decoration: none;
+            font-weight: 600;
+            transition: color 0.3s ease;
+        }
+        
+        .nav-links a:hover {
+            color: var(--primary);
+        }
+        
+        .nav-cta {
+            background: var(--primary);
+            color: white !important;
+            padding: 10px 25px;
+            border-radius: 25px;
+            transition: all 0.3s ease;
+        }
+        
+        .nav-cta:hover {
+            background: var(--accent);
+            transform: translateY(-2px);
+        }
+        
+        /* Hero */
+        .page-hero {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--accent) 100%);
+            color: white;
+            padding: 80px 20px 60px;
+            text-align: center;
+        }
+        
+        .page-hero h1 {
+            font-size: clamp(2rem, 4vw, 3rem);
+            margin-bottom: 20px;
+        }
+        
+        .page-hero p {
+            font-size: 1.2rem;
+            max-width: 700px;
+            margin: 0 auto;
+            opacity: 0.95;
+        }
+        
+        /* Container */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        section {
+            padding: 60px 20px;
+        }
+        
+        .section-title {
+            font-size: clamp(1.8rem, 3vw, 2.5rem);
+            margin-bottom: 15px;
+            color: var(--accent);
+        }
+        
+        .section-subtitle {
+            color: var(--text-light);
+            margin-bottom: 40px;
+            font-size: 1.1rem;
+        }
+        
+        /* Content Blocks */
+        .content-block {
+            background: white;
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+            margin-bottom: 30px;
+        }
+        
+        .content-block h3 {
+            color: var(--accent);
+            margin-bottom: 20px;
+            font-size: 1.6rem;
+        }
+        
+        .content-block p {
+            color: var(--text-dark);
+            margin-bottom: 15px;
+            font-size: 1.05rem;
+        }
+        
+        .content-block ul {
+            list-style: none;
+            padding: 0;
+            margin: 20px 0;
+        }
+        
+        .content-block li {
+            padding: 12px 0 12px 30px;
+            position: relative;
+            color: var(--text-dark);
+        }
+        
+        .content-block li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: var(--primary);
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+        
+        /* Warning Box */
+        .warning-box {
+            background: linear-gradient(135deg, rgba(255, 152, 0, 0.1), rgba(244, 67, 54, 0.1));
+            border-left: 4px solid var(--danger);
+            padding: 30px;
+            border-radius: 12px;
+            margin: 30px 0;
+        }
+        
+        .warning-box h3 {
+            color: var(--danger);
+            margin-bottom: 15px;
+        }
+        
+        .warning-box p {
+            color: var(--text-dark);
+            font-size: 1.05rem;
+        }
+        
+        /* Highlight Box */
+        .highlight-box {
+            background: linear-gradient(135deg, rgba(63, 176, 172, 0.1), rgba(250, 208, 137, 0.1));
+            border-left: 4px solid var(--primary);
+            padding: 30px;
+            border-radius: 12px;
+            margin: 30px 0;
+        }
+        
+        .highlight-box h3 {
+            color: var(--accent);
+            margin-bottom: 15px;
+        }
+        
+        .highlight-box p {
+            color: var(--text-dark);
+            font-size: 1.05rem;
+        }
+        
+        /* Симптомы */
+        .symptoms-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+            margin: 30px 0;
+        }
+        
+        .symptom-card {
+            background: var(--bg-light);
+            padding: 25px;
+            border-radius: 12px;
+            border-left: 4px solid var(--warning);
+        }
+        
+        .symptom-card h4 {
+            color: var(--accent);
+            margin-bottom: 10px;
+            font-size: 1.2rem;
+        }
+        
+        .symptom-card p {
+            color: var(--text-dark);
+            font-size: 1rem;
+        }
+        
+        /* Причины */
+        .causes-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+        
+        .cause-card {
+            background: white;
+            padding: 35px;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+            transition: all 0.3s ease;
+        }
+        
+        .cause-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(63, 176, 172, 0.15);
+        }
+        
+        .cause-icon {
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, var(--primary), var(--accent));
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 30px;
+            margin-bottom: 20px;
+        }
+        
+        .cause-card h3 {
+            font-size: 1.4rem;
+            margin-bottom: 15px;
+            color: var(--accent);
+        }
+        
+        .cause-card p {
+            color: var(--text-light);
+            line-height: 1.7;
+        }
+        
+        /* Stats */
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 25px;
+            margin: 40px 0;
+        }
+        
+        .stat-card {
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+            text-align: center;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+        }
+        
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--primary);
+            font-family: 'Playfair Display', serif;
+            margin-bottom: 10px;
+        }
+        
+        .stat-label {
+            color: var(--text-light);
+            font-size: 1rem;
+        }
+        
+        /* FAQ */
+        .faq-section {
+            background: white;
+        }
+        
+        .faq-item {
+            background: var(--bg-light);
+            padding: 25px 30px;
+            border-radius: 12px;
+            margin-bottom: 20px;
+        }
+        
+        .faq-question {
+            font-weight: 700;
+            color: var(--accent);
+            font-size: 1.15rem;
+        }
+        
+        .faq-answer {
+            color: var(--text-dark);
+            margin-top: 15px;
+            line-height: 1.8;
+        }
+        
+        /* Contact Form */
+        .contact-form-section {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--accent) 100%);
+            color: white;
+        }
+        
+        .contact-form-section .section-title {
+            color: white;
+            text-align: center;
+        }
+        
+        .contact-form-section .section-subtitle {
+            color: rgba(255,255,255,0.9);
+            text-align: center;
+        }
+        
+        .contact-form {
+            max-width: 600px;
+            margin: 40px auto 0;
+            background: rgba(255,255,255,0.1);
+            backdrop-filter: blur(10px);
+            padding: 45px;
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.2);
+        }
+        
+        .form-group {
+            margin-bottom: 25px;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 600;
+            font-size: 0.95rem;
+        }
+        
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 15px;
+            border: 2px solid rgba(255,255,255,0.3);
+            border-radius: 10px;
+            background: rgba(255,255,255,0.95);
+            color: var(--text-dark);
+            font-family: 'Nunito', sans-serif;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+        }
+        
+        .form-group input:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: var(--secondary);
+            background: white;
+        }
+        
+        .form-group textarea {
+            resize: vertical;
+            min-height: 120px;
+        }
+        
+        .submit-btn {
+            width: 100%;
+            padding: 18px;
+            background: var(--secondary);
+            color: var(--accent);
+            border: none;
+            border-radius: 50px;
+            font-size: 1.1rem;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-family: 'Nunito', sans-serif;
+        }
+        
+        .submit-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 30px rgba(250, 208, 137, 0.5);
+        }
+        
+        .form-message {
+            padding: 15px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            display: none;
+            text-align: center;
+        }
+        
+        .form-message.success {
+            background: rgba(76, 175, 80, 0.9);
+            color: white;
+        }
+        
+        .form-message.error {
+            background: rgba(244, 67, 54, 0.9);
+            color: white;
+        }
+        
+        /* Footer */
+        footer {
+            background: var(--accent);
+            color: white;
+            padding: 40px 20px 20px;
+            text-align: center;
+        }
+        
+        footer p {
+            color: rgba(255,255,255,0.8);
+        }
+        
+        footer a {
+            color: var(--secondary);
+            text-decoration: none;
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            .nav-links {
+                gap: 15px;
+                font-size: 0.9rem;
+            }
+            
+            .nav-cta {
+                padding: 8px 20px;
+            }
+            
+            .content-block {
+                padding: 30px 20px;
+            }
+            
+            .contact-form {
+                padding: 30px 25px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="top-nav">
+        <div class="nav-content">
+            <a href="index.html" class="nav-logo">Олейникова Ю.А.</a>
+            <div class="nav-links">
+                <a href="index.html#services">Услуги</a>
+                <a href="index.html#about">Обо мне</a>
+                <a href="#contact" class="nav-cta">Записаться</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <section class="page-hero">
+        <div class="container">
+            <h1>ЛОР-стоматология</h1>
+            <p>Комплексное лечение одонтогенного риносинусита. Совместная работа ЛОР-хирурга и стоматолога</p>
+        </div>
+    </section>
+
+    <!-- Основная информация -->
+    <section>
+        <div class="container">
+            <div class="content-block">
+                <h2 class="section-title">Что такое одонтогенный риносинусит?</h2>
+                <p>
+                    <strong>Одонтогенный риносинусит (одонтогенный гайморит)</strong> — это воспаление верхнечелюстной пазухи, 
+                    причиной которого являются заболевания зубов верхней челюсти. Слово «одонтогенный» означает 
+                    «происходящий от зуба».
+                </p>
+                <p>
+                    Верхнечелюстная (гайморова) пазуха находится внутри верхней челюсти, и дно этой пазухи 
+                    тесно связано с корнями верхних жевательных зубов (4, 5, 6, реже 7). Иногда корни зубов 
+                    выходят прямо в пазуху, разделяясь лишь тонкой слизистой оболочкой. Поэтому инфекция от больного зуба 
+                    легко проникает в пазуху и вызывает её воспаление.
+                </p>
+                
+                <div class="warning-box">
+                    <h3>⚠️ Важно знать</h3>
+                    <p>
+                        Одонтогенный риносинусит составляет 10-30% всех случаев гайморита. 
+                        Без устранения стоматологической причины лечение у ЛОР-врача не приведёт к выздоровлению — 
+                        будут только временные улучшения, а инфекция вернётся снова.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Причины -->
+    <section style="background: var(--bg-light);">
+        <div class="container">
+            <h2 class="section-title">Причины одонтогенного риносинусита</h2>
+            <p class="section-subtitle">Стоматологические проблемы, которые приводят к воспалению пазухи</p>
+            
+            <div class="causes-grid">
+                <div class="cause-card">
+                    <div class="cause-icon">🦷</div>
+                    <h3>Периодонтит</h3>
+                    <p>
+                        Воспаление тканей вокруг корня зуба. Инфекция из очага воспаления проникает через 
+                        тонкую костную перегородку в пазуху, вызывая гайморит.
+                    </p>
+                </div>
+                
+                <div class="cause-card">
+                    <div class="cause-icon">💧</div>
+                    <h3>Киста зуба</h3>
+                    <p>
+                        Киста у корня зуба может прорастать в пазуху. При её нагноении инфекция 
+                        попадает в пазуху и вызывает хроническое воспаление.
+                    </p>
+                </div>
+                
+                <div class="cause-card">
+                    <div class="cause-icon">🔧</div>
+                    <h3>Некачественное лечение каналов</h3>
+                    <p>
+                        При пломбировании каналов материал может выйти за верхушку корня в пазуху. 
+                        Это инородное тело вызывает воспалительную реакцию и грибковое поражение.
+                    </p>
+                </div>
+                
+                <div class="cause-card">
+                    <div class="cause-icon">❌</div>
+                    <h3>Осложнения после удаления зуба</h3>
+                    <p>
+                        При удалении верхних зубов может образоваться сообщение между полостью рта и пазухой 
+                        (ороантральное сообщение). Через это отверстие инфекция проникает в пазуху.
+                    </p>
+                </div>
+                
+                <div class="cause-card">
+                    <div class="cause-icon">🏗️</div>
+                    <h3>Имплантация и синус-лифтинг</h3>
+                    <p>
+                        Осложнения при установке имплантов или проведении синус-лифтинга: 
+                        перфорация дна пазухи, попадание материала в пазуху, инфицирование.
+                    </p>
+                </div>
+                
+                <div class="cause-card">
+                    <div class="cause-icon">🦴</div>
+                    <h3>Остеомиелит челюсти</h3>
+                    <p>
+                        Гнойное воспаление кости верхней челюсти может распространиться на пазуху 
+                        и вызвать тяжёлую форму одонтогенного синусита.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Симптомы -->
+    <section>
+        <div class="container">
+            <h2 class="section-title">Симптомы</h2>
+            <p class="section-subtitle">Как распознать одонтогенный риносинусит</p>
+            
+            <div class="symptoms-grid">
+                <div class="symptom-card">
+                    <h4>Односторонняя заложенность носа</h4>
+                    <p>Обычно страдает одна пазуха — та, со стороны которой находится больной зуб.</p>
+                </div>
+                
+                <div class="symptom-card">
+                    <h4>Гнойные выделения из носа</h4>
+                    <p>Часто с неприятным гнилостным запахом, особенно характерным для одонтогенной инфекции.</p>
+                </div>
+                
+                <div class="symptom-card">
+                    <h4>Боль в области щеки и зубов</h4>
+                    <p>Боль при жевании, надавливании на больной зуб, ощущение тяжести и распирания в щеке.</p>
+                </div>
+                
+                <div class="symptom-card">
+                    <h4>Головная боль</h4>
+                    <p>Усиливается при наклоне головы вперёд, локализуется в области лба и щеки.</p>
+                </div>
+                
+                <div class="symptom-card">
+                    <h4>Повышение температуры</h4>
+                    <p>При остром процессе температура может подниматься до 38-39°C, при хроническом — субфебрильная или нормальная.</p>
+                </div>
+                
+                <div class="symptom-card">
+                    <h4>Неприятный привкус во рту</h4>
+                    <p>Гнойное отделяемое стекает по задней стенке глотки, создавая неприятный привкус.</p>
+                </div>
+            </div>
+            
+            <div class="highlight-box">
+                <h3>Как отличить от обычного гайморита?</h3>
+                <p>
+                    Ключевые признаки одонтогенного происхождения: одностороннее поражение, 
+                    связь с недавним лечением или удалением зуба, боль в конкретном зубе, 
+                    неприятный гнилостный запах выделений. При обычном (риногенном) гайморите 
+                    обычно поражаются обе пазухи, есть связь с ОРВИ, нет зубной боли.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Диагностика -->
+    <section style="background: var(--bg-light);">
+        <div class="container">
+            <div class="content-block">
+                <h2 class="section-title">Диагностика</h2>
+                <p>
+                    Для точной диагностики одонтогенного риносинусита и выбора правильной тактики лечения необходимо:
+                </p>
+                
+                <ul>
+                    <li><strong>Консультация ЛОР-врача</strong> — эндоскопический осмотр полости носа, риноскопия</li>
+                    <li><strong>Консультация стоматолога</strong> — осмотр зубов, выявление причинного зуба</li>
+                    <li><strong>Компьютерная томография (КТ) околоносовых пазух</strong> — золотой стандарт диагностики. 
+                    Позволяет увидеть: воспаление в пазухе, связь с зубом, кисту, инородные тела (пломбировочный материал), 
+                    грибковые массы, перфорацию дна пазухи</li>
+                    <li><strong>Рентген зубов</strong> — для оценки состояния корневых каналов</li>
+                </ul>
+                
+                <p style="margin-top: 20px;">
+                    <strong>Важно:</strong> Только комплексное обследование у обоих специалистов позволяет 
+                    поставить правильный диагноз и выбрать оптимальную тактику лечения.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Лечение -->
+    <section>
+        <div class="container">
+            <h2 class="section-title">Лечение одонтогенного риносинусита</h2>
+            <p class="section-subtitle">Комплексный подход — залог успешного выздоровления</p>
+            
+            <div class="content-block">
+                <h3>Принцип лечения</h3>
+                <p>
+                    Одонтогенный риносинусит невозможно вылечить без устранения стоматологической причины. 
+                    Лечение должно быть <strong>комплексным</strong> и проводиться <strong>двумя специалистами одновременно</strong>: 
+                    стоматологом-хирургом и ЛОР-врачом.
+                </p>
+                
+                <div class="highlight-box">
+                    <h3>Мой подход</h3>
+                    <p>
+                        Я работаю в тесном контакте со стоматологами-хирургами. Мы проводим операции совместно, 
+                        в один день: стоматолог устраняет причину (удаляет зуб, кисту, закрывает перфорацию), 
+                        а я эндоскопически санирую пазуху. Это максимально удобно для пациента и даёт лучший результат.
+                    </p>
+                </div>
+            </div>
+            
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-number">1</div>
+                    <div class="stat-label">День — всё в одной операции</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">2</div>
+                    <div class="stat-label">Специалиста работают вместе</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">90%</div>
+                    <div class="stat-label">Эффективность комплексного подхода</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">1-2</div>
+                    <div class="stat-label">Дня в стационаре</div>
+                </div>
+            </div>
+            
+            <div class="content-block" style="margin-top: 40px;">
+                <h3>Этапы лечения</h3>
+                
+                <h4 style="color: var(--primary); margin: 25px 0 15px;">1. Стоматологический этап</h4>
+                <ul>
+                    <li>Удаление причинного зуба (если невозможно сохранить)</li>
+                    <li>Удаление кисты или гранулёмы</li>
+                    <li>Извлечение пломбировочного материала из пазухи (если попал)</li>
+                    <li>Закрытие ороантрального сообщения (перфорации между ртом и пазухой)</li>
+                    <li>Лечение каналов (если зуб можно сохранить)</li>
+                </ul>
+                
+                <h4 style="color: var(--primary); margin: 25px 0 15px;">2. ЛОР-хирургический этап</h4>
+                <ul>
+                    <li>Эндоскопическая гайморотомия — санация пазухи через естественное соустье</li>
+                    <li>Удаление гноя, грибковых масс, инородных тел из пазухи</li>
+                    <li>Расширение естественного соустья для нормального дренажа</li>
+                    <li>Восстановление вентиляции и самоочищения пазухи</li>
+                </ul>
+                
+                <h4 style="color: var(--primary); margin: 25px 0 15px;">3. Медикаментозная терапия</h4>
+                <ul>
+                    <li>Антибиотики широкого спектра действия</li>
+                    <li>Противовоспалительные препараты</li>
+                    <li>Сосудосуживающие капли для улучшения оттока</li>
+                    <li>Промывания носа солевыми растворами</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Преимущества подхода -->
+    <section style="background: var(--bg-light);">
+        <div class="container">
+            <h2 class="section-title">Преимущества комплексного подхода</h2>
+            
+            <div class="content-block">
+                <ul>
+                    <li><strong>Одномоментное решение проблемы</strong> — и зуб, и пазуха лечатся в один день</li>
+                    <li><strong>Меньше стресса для пациента</strong> — одна операция вместо двух отдельных</li>
+                    <li><strong>Быстрое выздоровление</strong> — устранена причина, пазуха санирована</li>
+                    <li><strong>Минимальный риск рецидива</strong> — нет источника инфекции</li>
+                    <li><strong>Эндоскопический доступ</strong> — без разрезов на лице, только через нос</li>
+                    <li><strong>Контроль заживления</strong> — наблюдение двух специалистов</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="faq-section">
+        <div class="container">
+            <h2 class="section-title">Часто задаваемые вопросы</h2>
+            
+            <div class="faq-item">
+                <div class="faq-question">
+                    Можно ли вылечить одонтогенный гайморит без удаления зуба?
+                </div>
+                <div class="faq-answer">
+                    Зависит от ситуации. Если зуб можно качественно пролечить (прочистить каналы, удалить кисту), 
+                    то удаление не нужно. Но если зуб сильно разрушен, есть большая киста или периодонтит не поддаётся лечению — 
+                    удаление обязательно. Только так можно устранить источник инфекции.
+                </div>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question">
+                    Что будет, если лечить только у ЛОРа, не трогая зуб?
+                </div>
+                <div class="faq-answer">
+                    Временное улучшение, но не выздоровление. Пока есть больной зуб или киста — источник инфекции остаётся. 
+                    Гайморит будет возвращаться снова и снова, переходя в хроническую форму. 
+                    Поэтому обязательно нужно работать совместно — ЛОР и стоматолог.
+                </div>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question">
+                    Нужна ли госпитализация?
+                </div>
+                <div class="faq-answer">
+                    Обычно достаточно 1-2 дней в стационаре. Операция проводится утром, 
+                    на следующий день при хорошем самочувствии пациент выписывается домой. 
+                    Дальше — амбулаторное наблюдение и контрольные осмотры.
+                </div>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question">
+                    Как долго длится восстановление?
+                </div>
+                <div class="faq-answer">
+                    Полное заживление занимает 2-3 недели. Уже через 3-5 дней можно вернуться к лёгкой работе. 
+                    Через 7-10 дней снимаются швы (если были). Через 2-3 недели — полное восстановление, 
+                    контрольный осмотр и КТ для подтверждения выздоровления.
+                </div>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question">
+                    Может ли гайморит вернуться после лечения?
+                </div>
+                <div class="faq-answer">
+                    При правильном комплексном лечении (устранение зуба + санация пазухи) рецидивы очень редки — менее 5%. 
+                    Важно соблюдать рекомендации после операции и проходить контрольные осмотры.
+                </div>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question">
+                    Что делать, если после удаления зуба образовалось сообщение с пазухой?
+                </div>
+                <div class="faq-answer">
+                    Это ороантральное сообщение нужно закрыть как можно скорее — в идеале в день удаления зуба. 
+                    Через это отверстие инфекция из полости рта проникает в пазуху. Стоматолог-хирург ушивает дефект, 
+                    используя специальные методики. Чем раньше закрыть — тем лучше результат.
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Форма записи -->
+    <section class="contact-form-section" id="contact">
+        <div class="container">
+            <h2 class="section-title">Записаться на консультацию</h2>
+            <p class="section-subtitle">Помогу разобраться в причинах и составлю план комплексного лечения</p>
+            
+            <form class="contact-form" id="appointmentForm">
+                <div id="formMessage" class="form-message"></div>
+                
+                <div class="form-group">
+                    <label for="name">Ваше имя *</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="phone">Телефон *</label>
+                    <input type="tel" id="phone" name="phone" required placeholder="+7 (___) ___-__-__">
+                </div>
+                
+                <div class="form-group">
+                    <label for="message">Опишите вашу проблему</label>
+                    <textarea id="message" name="message" rows="4" placeholder="Есть ли проблемы с зубами? Когда начались симптомы?"></textarea>
+                </div>
+                
+                <button type="submit" class="submit-btn">Отправить заявку</button>
+                
+                <p style="margin-top: 20px; font-size: 0.9rem; text-align: center; opacity: 0.9;">
+                    Нажимая кнопку, вы соглашаетесь с обработкой персональных данных
+                </p>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p><strong>Олейникова Юлия Александровна</strong> | ЛОР-хирург</p>
+            <p>МЦ «Гиппократ 21 век», Ростов-на-Дону, 13-я Линия, д. 8</p>
+            <p>Телефон: <a href="tel:+78633339179">+7 (863) 333-91-79</a></p>
+            <p style="margin-top: 20px;">&copy; 2026 Все права защищены</p>
+        </div>
+    </footer>
+
+    <script>
+        // Telegram Bot Configuration
+        const TELEGRAM_BOT_TOKEN = 'YOUR_BOT_TOKEN';
+        const TELEGRAM_CHAT_ID = 'YOUR_CHAT_ID';
+        
+        // Phone mask
+        const phoneInput = document.getElementById('phone');
+        phoneInput.addEventListener('input', function(e) {
+            let x = e.target.value.replace(/\D/g, '').match(/(\d{0,1})(\d{0,3})(\d{0,3})(\d{0,2})(\d{0,2})/);
+            e.target.value = !x[2] ? x[1] : '+7 (' + x[2] + ') ' + x[3] + (x[4] ? '-' + x[4] : '') + (x[5] ? '-' + x[5] : '');
+        });
+        
+        // Form submission
+        document.getElementById('appointmentForm').addEventListener('submit', async function(e) {
+            e.preventDefault();
+            
+            const formMessage = document.getElementById('formMessage');
+            const submitBtn = e.target.querySelector('.submit-btn');
+            
+            const name = document.getElementById('name').value;
+            const phone = document.getElementById('phone').value;
+            const message = document.getElementById('message').value;
+            
+            const telegramMessage = `
+🏥 <b>Новая заявка: Одонтогенный риносинусит</b>
+
+👤 <b>Имя:</b> ${name}
+📞 <b>Телефон:</b> ${phone}
+💬 <b>Сообщение:</b> ${message || 'Не указано'}
+
+📅 <b>Дата:</b> ${new Date().toLocaleString('ru-RU')}
+            `.trim();
+            
+            submitBtn.disabled = true;
+            submitBtn.textContent = 'Отправка...';
+            
+            try {
+                const response = await fetch(`https://api.telegram.org/bot${TELEGRAM_BOT_TOKEN}/sendMessage`, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({
+                        chat_id: TELEGRAM_CHAT_ID,
+                        text: telegramMessage,
+                        parse_mode: 'HTML'
+                    })
+                });
+                
+                if (response.ok) {
+                    formMessage.className = 'form-message success';
+                    formMessage.textContent = '✓ Заявка отправлена! Я свяжусь с вами в ближайшее время.';
+                    formMessage.style.display = 'block';
+                    e.target.reset();
+                    setTimeout(() => formMessage.style.display = 'none', 5000);
+                } else {
+                    throw new Error('Network error');
+                }
+            } catch (error) {
+                formMessage.className = 'form-message error';
+                formMessage.textContent = '✗ Ошибка. Позвоните: +7 (863) 333-91-79';
+                formMessage.style.display = 'block';
+            } finally {
+                submitBtn.disabled = false;
+                submitBtn.textContent = 'Отправить заявку';
+            }
+        });
+    </script>
+</body>
+</html>
