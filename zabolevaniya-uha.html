@@ -1,0 +1,911 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Заболевания уха - лечение отитов | Олейникова Ю.А.</title>
+    <meta name="description" content="Диагностика и лечение заболеваний уха в Ростове-на-Дону: острый и хронический отит, тугоухость, серные пробки, перфорация барабанной перепонки.">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Nunito:wght@300;400;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --primary: #3FB0AC;
+            --secondary: #FAD089;
+            --accent: #173E43;
+            --bg-light: #F8F9FA;
+            --bg-white: #FFFFFF;
+            --text-dark: #2C3E50;
+            --text-light: #6C757D;
+            --border-light: #E9ECEF;
+            --success: #4CAF50;
+            --warning: #FF9800;
+            --danger: #F44336;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        html {
+            scroll-behavior: smooth;
+        }
+        
+        body {
+            font-family: 'Nunito', sans-serif;
+            color: var(--text-dark);
+            line-height: 1.7;
+            overflow-x: hidden;
+        }
+        
+        h1, h2, h3, h4 {
+            font-family: 'Playfair Display', serif;
+            font-weight: 700;
+            line-height: 1.3;
+        }
+        
+        /* Navigation */
+        .top-nav {
+            background: white;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            padding: 15px 20px;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        
+        .nav-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .nav-logo {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: var(--accent);
+            text-decoration: none;
+        }
+        
+        .nav-links {
+            display: flex;
+            gap: 25px;
+            align-items: center;
+        }
+        
+        .nav-links a {
+            color: var(--text-dark);
+            text-decoration: none;
+            font-weight: 600;
+            transition: color 0.3s ease;
+        }
+        
+        .nav-links a:hover {
+            color: var(--primary);
+        }
+        
+        .nav-cta {
+            background: var(--primary);
+            color: white !important;
+            padding: 10px 25px;
+            border-radius: 25px;
+            transition: all 0.3s ease;
+        }
+        
+        .nav-cta:hover {
+            background: var(--accent);
+            transform: translateY(-2px);
+        }
+        
+        /* Hero */
+        .page-hero {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--accent) 100%);
+            color: white;
+            padding: 80px 20px 60px;
+            text-align: center;
+        }
+        
+        .page-hero h1 {
+            font-size: clamp(2rem, 4vw, 3rem);
+            margin-bottom: 20px;
+        }
+        
+        .page-hero p {
+            font-size: 1.2rem;
+            max-width: 700px;
+            margin: 0 auto;
+            opacity: 0.95;
+        }
+        
+        /* Container */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        section {
+            padding: 60px 20px;
+        }
+        
+        .section-title {
+            font-size: clamp(1.8rem, 3vw, 2.5rem);
+            margin-bottom: 15px;
+            color: var(--accent);
+        }
+        
+        .section-subtitle {
+            color: var(--text-light);
+            margin-bottom: 40px;
+            font-size: 1.1rem;
+        }
+        
+        /* Content Blocks */
+        .content-block {
+            background: white;
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+            margin-bottom: 30px;
+        }
+        
+        .content-block h3 {
+            color: var(--accent);
+            margin-bottom: 20px;
+            font-size: 1.6rem;
+        }
+        
+        .content-block p {
+            color: var(--text-dark);
+            margin-bottom: 15px;
+            font-size: 1.05rem;
+        }
+        
+        .content-block ul {
+            list-style: none;
+            padding: 0;
+            margin: 20px 0;
+        }
+        
+        .content-block li {
+            padding: 12px 0 12px 30px;
+            position: relative;
+            color: var(--text-dark);
+        }
+        
+        .content-block li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: var(--primary);
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+        
+        /* Warning Box */
+        .warning-box {
+            background: linear-gradient(135deg, rgba(255, 152, 0, 0.1), rgba(244, 67, 54, 0.1));
+            border-left: 4px solid var(--danger);
+            padding: 30px;
+            border-radius: 12px;
+            margin: 30px 0;
+        }
+        
+        .warning-box h3 {
+            color: var(--danger);
+            margin-bottom: 15px;
+        }
+        
+        .warning-box p {
+            color: var(--text-dark);
+            font-size: 1.05rem;
+        }
+        
+        /* Highlight Box */
+        .highlight-box {
+            background: linear-gradient(135deg, rgba(63, 176, 172, 0.1), rgba(250, 208, 137, 0.1));
+            border-left: 4px solid var(--primary);
+            padding: 30px;
+            border-radius: 12px;
+            margin: 30px 0;
+        }
+        
+        .highlight-box h3 {
+            color: var(--accent);
+            margin-bottom: 15px;
+        }
+        
+        .highlight-box p {
+            color: var(--text-dark);
+            font-size: 1.05rem;
+        }
+        
+        /* Diseases Grid */
+        .diseases-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+        
+        .disease-card {
+            background: white;
+            padding: 35px;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+            transition: all 0.3s ease;
+        }
+        
+        .disease-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(63, 176, 172, 0.15);
+        }
+        
+        .disease-icon {
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, var(--primary), var(--accent));
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 30px;
+            margin-bottom: 20px;
+        }
+        
+        .disease-card h3 {
+            font-size: 1.4rem;
+            margin-bottom: 15px;
+            color: var(--accent);
+        }
+        
+        .disease-card p {
+            color: var(--text-dark);
+            line-height: 1.7;
+            margin-bottom: 15px;
+        }
+        
+        .disease-card ul {
+            list-style: none;
+            padding: 0;
+            margin-top: 15px;
+        }
+        
+        .disease-card li {
+            padding: 6px 0 6px 20px;
+            position: relative;
+            color: var(--text-dark);
+            font-size: 0.95rem;
+        }
+        
+        .disease-card li::before {
+            content: '•';
+            position: absolute;
+            left: 0;
+            color: var(--primary);
+            font-weight: bold;
+        }
+        
+        /* FAQ */
+        .faq-section {
+            background: white;
+        }
+        
+        .faq-item {
+            background: var(--bg-light);
+            padding: 25px 30px;
+            border-radius: 12px;
+            margin-bottom: 20px;
+        }
+        
+        .faq-question {
+            font-weight: 700;
+            color: var(--accent);
+            font-size: 1.15rem;
+        }
+        
+        .faq-answer {
+            color: var(--text-dark);
+            margin-top: 15px;
+            line-height: 1.8;
+        }
+        
+        /* Contact Form */
+        .contact-form-section {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--accent) 100%);
+            color: white;
+        }
+        
+        .contact-form-section .section-title {
+            color: white;
+            text-align: center;
+        }
+        
+        .contact-form-section .section-subtitle {
+            color: rgba(255,255,255,0.9);
+            text-align: center;
+        }
+        
+        .contact-form {
+            max-width: 600px;
+            margin: 40px auto 0;
+            background: rgba(255,255,255,0.1);
+            backdrop-filter: blur(10px);
+            padding: 45px;
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.2);
+        }
+        
+        .form-group {
+            margin-bottom: 25px;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 600;
+            font-size: 0.95rem;
+        }
+        
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 15px;
+            border: 2px solid rgba(255,255,255,0.3);
+            border-radius: 10px;
+            background: rgba(255,255,255,0.95);
+            color: var(--text-dark);
+            font-family: 'Nunito', sans-serif;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+        }
+        
+        .form-group input:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: var(--secondary);
+            background: white;
+        }
+        
+        .form-group textarea {
+            resize: vertical;
+            min-height: 120px;
+        }
+        
+        .submit-btn {
+            width: 100%;
+            padding: 18px;
+            background: var(--secondary);
+            color: var(--accent);
+            border: none;
+            border-radius: 50px;
+            font-size: 1.1rem;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-family: 'Nunito', sans-serif;
+        }
+        
+        .submit-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 30px rgba(250, 208, 137, 0.5);
+        }
+        
+        .form-message {
+            padding: 15px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            display: none;
+            text-align: center;
+        }
+        
+        .form-message.success {
+            background: rgba(76, 175, 80, 0.9);
+            color: white;
+        }
+        
+        .form-message.error {
+            background: rgba(244, 67, 54, 0.9);
+            color: white;
+        }
+        
+        /* Footer */
+        footer {
+            background: var(--accent);
+            color: white;
+            padding: 40px 20px 20px;
+            text-align: center;
+        }
+        
+        footer p {
+            color: rgba(255,255,255,0.8);
+        }
+        
+        footer a {
+            color: var(--secondary);
+            text-decoration: none;
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            .nav-links {
+                gap: 15px;
+                font-size: 0.9rem;
+            }
+            
+            .nav-cta {
+                padding: 8px 20px;
+            }
+            
+            .content-block {
+                padding: 30px 20px;
+            }
+            
+            .contact-form {
+                padding: 30px 25px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="top-nav">
+        <div class="nav-content">
+            <a href="index.html" class="nav-logo">Олейникова Ю.А.</a>
+            <div class="nav-links">
+                <a href="index.html#services">Услуги</a>
+                <a href="index.html#about">Обо мне</a>
+                <a href="#contact" class="nav-cta">Записаться</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <section class="page-hero">
+        <div class="container">
+            <h1>Заболевания уха</h1>
+            <p>Диагностика и лечение острых и хронических отитов, тугоухости, серных пробок</p>
+        </div>
+    </section>
+
+    <!-- Введение -->
+    <section>
+        <div class="container">
+            <div class="content-block">
+                <h2 class="section-title">О заболеваниях уха</h2>
+                <p>
+                    Ухо — сложный орган, отвечающий не только за слух, но и за равновесие. 
+                    Заболевания уха могут привести к серьёзным последствиям: снижению слуха, хроническим воспалениям, 
+                    осложнениям на головной мозг. Своевременная диагностика и правильное лечение — 
+                    ключ к сохранению здоровья уха и качественного слуха.
+                </p>
+                <p>
+                    Я занимаюсь диагностикой и лечением всего спектра заболеваний уха: от простых серных пробок 
+                    до сложных хронических отитов, требующих хирургического лечения.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Основные заболевания -->
+    <section style="background: var(--bg-light);">
+        <div class="container">
+            <h2 class="section-title">Основные заболевания уха</h2>
+            <p class="section-subtitle">С чем чаще всего обращаются пациенты</p>
+            
+            <div class="diseases-grid">
+                <div class="disease-card">
+                    <div class="disease-icon">👂</div>
+                    <h3>Наружный отит</h3>
+                    <p>
+                        Воспаление кожи наружного слухового прохода. Часто возникает после купания в бассейне или море 
+                        («ухо пловца»), при травмах от ватных палочек, наушников.
+                    </p>
+                    <p><strong>Симптомы:</strong></p>
+                    <ul>
+                        <li>Боль в ухе, усиливающаяся при жевании</li>
+                        <li>Зуд в слуховом проходе</li>
+                        <li>Выделения из уха</li>
+                        <li>Снижение слуха из-за отёка</li>
+                    </ul>
+                    <p><strong>Лечение:</strong> Ушные капли с антибиотиком, турунды с лекарством, исключение воды в ухо.</p>
+                </div>
+                
+                <div class="disease-card">
+                    <div class="disease-icon">🦠</div>
+                    <h3>Острый средний отит</h3>
+                    <p>
+                        Воспаление среднего уха (барабанной полости). Чаще всего возникает как осложнение ОРВИ, 
+                        когда инфекция через слуховую трубу попадает в среднее ухо. Особенно часто болеют дети.
+                    </p>
+                    <p><strong>Симптомы:</strong></p>
+                    <ul>
+                        <li>Сильная стреляющая боль в ухе</li>
+                        <li>Повышение температуры до 38-39°C</li>
+                        <li>Снижение слуха, заложенность</li>
+                        <li>При перфорации — гнойные выделения</li>
+                    </ul>
+                    <p><strong>Лечение:</strong> Антибиотики, сосудосуживающие капли в нос, обезболивающие. 
+                    При необходимости — парацентез (прокол барабанной перепонки для оттока гноя).</p>
+                </div>
+                
+                <div class="disease-card">
+                    <div class="disease-icon">🔄</div>
+                    <h3>Хронический средний отит</h3>
+                    <p>
+                        Длительное воспаление среднего уха с постоянной или периодической перфорацией барабанной перепонки. 
+                        Развивается после нелеченного острого отита или повторных обострений.
+                    </p>
+                    <p><strong>Симптомы:</strong></p>
+                    <ul>
+                        <li>Периодические гнойные выделения</li>
+                        <li>Стойкое снижение слуха</li>
+                        <li>Отверстие в барабанной перепонке</li>
+                        <li>Обострения при ОРВИ, попадании воды</li>
+                    </ul>
+                    <p><strong>Лечение:</strong> Консервативное при обострениях, хирургическое (тимпанопластика) 
+                    для закрытия перфорации и восстановления слуха.</p>
+                </div>
+                
+                <div class="disease-card">
+                    <div class="disease-icon">💧</div>
+                    <h3>Экссудативный средний отит</h3>
+                    <p>
+                        Скопление жидкости в среднем ухе без признаков острого воспаления. 
+                        Возникает при нарушении функции слуховой трубы (аденоиды, искривление перегородки, аллергия).
+                    </p>
+                    <p><strong>Симптомы:</strong></p>
+                    <ul>
+                        <li>Снижение слуха</li>
+                        <li>Заложенность уха</li>
+                        <li>Ощущение переливания жидкости</li>
+                        <li>Нет боли и температуры</li>
+                    </ul>
+                    <p><strong>Лечение:</strong> Устранение причины (аденоиды, ринит), продувание слуховых труб, 
+                    при длительном течении — шунтирование барабанной полости.</p>
+                </div>
+                
+                <div class="disease-card">
+                    <div class="disease-icon">🧼</div>
+                    <h3>Серная пробка</h3>
+                    <p>
+                        Скопление ушной серы в наружном слуховом проходе. Может полностью блокировать проход и вызвать резкое снижение слуха.
+                    </p>
+                    <p><strong>Симптомы:</strong></p>
+                    <ul>
+                        <li>Внезапное снижение слуха (часто после душа)</li>
+                        <li>Заложенность уха</li>
+                        <li>Шум в ухе</li>
+                        <li>Иногда головокружение</li>
+                    </ul>
+                    <p><strong>Лечение:</strong> Промывание уха тёплой водой или удаление специальными инструментами. 
+                    НЕ пытайтесь удалить ватными палочками — только протолкнёте глубже!</p>
+                </div>
+                
+                <div class="disease-card">
+                    <div class="disease-icon">🔇</div>
+                    <h3>Нейросенсорная тугоухость</h3>
+                    <p>
+                        Снижение слуха из-за поражения внутреннего уха или слухового нерва. 
+                        Причины: возрастные изменения, шумовая травма, вирусные инфекции, приём ототоксичных препаратов.
+                    </p>
+                    <p><strong>Симптомы:</strong></p>
+                    <ul>
+                        <li>Постепенное или внезапное снижение слуха</li>
+                        <li>Шум в ушах</li>
+                        <li>Нарушение разборчивости речи</li>
+                        <li>Головокружение (при поражении вестибулярного аппарата)</li>
+                    </ul>
+                    <p><strong>Лечение:</strong> Зависит от причины. При острой тугоухости — срочная госпитализация! 
+                    Медикаментозная терапия, физиолечение, при стойком снижении слуха — слухопротезирование.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Когда срочно к врачу -->
+    <section>
+        <div class="container">
+            <div class="warning-box">
+                <h3>⚠️ Срочно обратитесь к ЛОР-врачу, если:</h3>
+                <ul style="list-style: none; padding: 0;">
+                    <li style="padding: 8px 0; position: relative; padding-left: 25px;">
+                        <span style="position: absolute; left: 0; color: var(--danger); font-weight: bold;">!</span>
+                        Внезапно резко снизился слух (особенно на одно ухо)
+                    </li>
+                    <li style="padding: 8px 0; position: relative; padding-left: 25px;">
+                        <span style="position: absolute; left: 0; color: var(--danger); font-weight: bold;">!</span>
+                        Сильная боль в ухе, особенно с температурой
+                    </li>
+                    <li style="padding: 8px 0; position: relative; padding-left: 25px;">
+                        <span style="position: absolute; left: 0; color: var(--danger); font-weight: bold;">!</span>
+                        Гнойные или кровянистые выделения из уха
+                    </li>
+                    <li style="padding: 8px 0; position: relative; padding-left: 25px;">
+                        <span style="position: absolute; left: 0; color: var(--danger); font-weight: bold;">!</span>
+                        Головокружение с тошнотой, нарушение равновесия
+                    </li>
+                    <li style="padding: 8px 0; position: relative; padding-left: 25px;">
+                        <span style="position: absolute; left: 0; color: var(--danger); font-weight: bold;">!</span>
+                        Боль за ухом, покраснение и отёк заушной области (признак мастоидита)
+                    </li>
+                </ul>
+                <p style="margin-top: 20px;">
+                    Эти симптомы могут указывать на серьёзные осложнения, требующие немедленного лечения!
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Диагностика -->
+    <section style="background: var(--bg-light);">
+        <div class="container">
+            <div class="content-block">
+                <h2 class="section-title">Диагностика заболеваний уха</h2>
+                <p>
+                    Для точной диагностики и выбора правильной тактики лечения я провожу:
+                </p>
+                
+                <ul>
+                    <li><strong>Отоскопия</strong> — осмотр наружного слухового прохода и барабанной перепонки с помощью отоскопа</li>
+                    <li><strong>Эндоскопия уха</strong> — детальный осмотр с увеличением, видеофиксация</li>
+                    <li><strong>Аудиометрия</strong> — исследование слуха, определение степени и типа тугоухости</li>
+                    <li><strong>Тимпанометрия</strong> — оценка функции барабанной перепонки и слуховых косточек</li>
+                    <li><strong>КТ височных костей</strong> — при подозрении на мастоидит, холестеатому, аномалии развития</li>
+                    <li><strong>Бактериологический посев</strong> — при хронических отитах для подбора антибиотика</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Лечение -->
+    <section>
+        <div class="container">
+            <h2 class="section-title">Лечение заболеваний уха</h2>
+            <p class="section-subtitle">Современные методы консервативной и хирургической терапии</p>
+            
+            <div class="content-block">
+                <h3>Консервативное лечение</h3>
+                <p>Применяется при острых и обострениях хронических отитов:</p>
+                <ul>
+                    <li>Антибактериальная терапия (местно и системно)</li>
+                    <li>Противовоспалительные и обезболивающие препараты</li>
+                    <li>Сосудосуживающие капли в нос (для восстановления функции слуховой трубы)</li>
+                    <li>Ушные капли с антибиотиками и противовоспалительными компонентами</li>
+                    <li>Турунды с лекарственными препаратами</li>
+                    <li>Промывание уха антисептиками (при гнойном отите)</li>
+                    <li>Физиотерапия (УВЧ, лазер, пневмомассаж барабанной перепонки)</li>
+                </ul>
+            </div>
+            
+            <div class="content-block">
+                <h3>Хирургическое лечение</h3>
+                <p>Показано при хронических отитах, осложнениях, стойком снижении слуха:</p>
+                
+                <h4 style="color: var(--primary); margin: 25px 0 15px;">Парацентез (тимпанотомия)</h4>
+                <p>
+                    Прокол барабанной перепонки для оттока гноя при остром отите. 
+                    Выполняется под местной анестезией, занимает 5 минут. Быстро снимает боль и предотвращает осложнения.
+                </p>
+                
+                <h4 style="color: var(--primary); margin: 25px 0 15px;">Шунтирование барабанной полости</h4>
+                <p>
+                    Установка крошечной вентиляционной трубки в барабанную перепонку при экссудативном отите. 
+                    Обеспечивает вентиляцию среднего уха, отток жидкости, восстановление слуха. 
+                    Шунт стоит 6-12 месяцев, затем выпадает сам.
+                </p>
+                
+                <h4 style="color: var(--primary); margin: 25px 0 15px;">Тимпанопластика</h4>
+                <p>
+                    Операция по закрытию перфорации барабанной перепонки и восстановлению слуха. 
+                    Выполняется при хроническом отите с постоянной перфорацией. 
+                    Используется собственная ткань пациента (фасция, хрящ) для пластики перепонки.
+                </p>
+                <p>
+                    <strong>Результат:</strong> Закрытие перфорации у 85-95% пациентов, улучшение слуха на 15-30 дБ, 
+                    профилактика повторных обострений.
+                </p>
+                
+                <h4 style="color: var(--primary); margin: 25px 0 15px;">Мастоидотомия</h4>
+                <p>
+                    Операция на сосцевидном отростке при мастоидите, холестеатоме. 
+                    Удаляются поражённые костные ячейки, создаётся дренаж. 
+                    Предотвращает опасные внутричерепные осложнения.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="faq-section">
+        <div class="container">
+            <h2 class="section-title">Часто задаваемые вопросы</h2>
+            
+            <div class="faq-item">
+                <div class="faq-question">
+                    Можно ли греть ухо при отите?
+                </div>
+                <div class="faq-answer">
+                    НЕТ! При остром гнойном отите греть ухо категорически запрещено. 
+                    Тепло усиливает воспаление и может привести к распространению инфекции, осложнениям. 
+                    Сухое тепло допустимо только на стадии выздоровления по назначению врача.
+                </div>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question">
+                    Можно ли самостоятельно удалить серную пробку?
+                </div>
+                <div class="faq-answer">
+                    Не рекомендуется! Попытки удалить пробку ватными палочками обычно заканчиваются тем, 
+                    что вы проталкиваете её глубже. Промывание в домашних условиях опасно при перфорации барабанной перепонки. 
+                    Лучше обратиться к ЛОР-врачу — удаление займёт 5 минут и безопасно.
+                </div>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question">
+                    Зарастёт ли перфорация барабанной перепонки сама?
+                </div>
+                <div class="faq-answer">
+                    Небольшие свежие перфорации (после травмы или парацентеза) обычно заживают сами за 2-4 недели. 
+                    Но хронические перфорации, существующие месяцами и годами, сами не закроются — 
+                    нужна операция (тимпанопластика).
+                </div>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question">
+                    Как часто можно использовать ушные капли?
+                </div>
+                <div class="faq-answer">
+                    Зависит от препарата. Антибактериальные капли обычно применяют 3-4 раза в день курсом 5-7 дней. 
+                    Важно: НИКОГДА не капайте в ухо ничего, если есть перфорация барабанной перепонки или гнойные выделения, 
+                    без назначения врача — многие капли ототоксичны и могут повредить слух!
+                </div>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question">
+                    Что делать при внезапной потере слуха?
+                </div>
+                <div class="faq-answer">
+                    Срочно (в течение 24-48 часов!) обратиться к ЛОР-врачу. Внезапная нейросенсорная тугоухость — 
+                    это экстренное состояние. Чем раньше начато лечение, тем больше шансов восстановить слух. 
+                    Промедление может привести к необратимой глухоте.
+                </div>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question">
+                    Больно ли делать тимпанопластику?
+                </div>
+                <div class="faq-answer">
+                    Операция проводится под общим наркозом, поэтому во время операции боли нет. 
+                    После операции возможен умеренный дискомфорт в ухе в течение 3-5 дней, 
+                    который хорошо контролируется обезболивающими. Большинство пациентов отмечают, 
+                    что боль значительно меньше, чем при обострении хронического отита.
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Форма записи -->
+    <section class="contact-form-section" id="contact">
+        <div class="container">
+            <h2 class="section-title">Записаться на консультацию</h2>
+            <p class="section-subtitle">Проведу полную диагностику и подберу эффективное лечение</p>
+            
+            <form class="contact-form" id="appointmentForm">
+                <div id="formMessage" class="form-message"></div>
+                
+                <div class="form-group">
+                    <label for="name">Ваше имя *</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="phone">Телефон *</label>
+                    <input type="tel" id="phone" name="phone" required placeholder="+7 (___) ___-__-__">
+                </div>
+                
+                <div class="form-group">
+                    <label for="message">Опишите вашу проблему</label>
+                    <textarea id="message" name="message" rows="4" placeholder="Какие симптомы беспокоят? Как давно?"></textarea>
+                </div>
+                
+                <button type="submit" class="submit-btn">Отправить заявку</button>
+                
+                <p style="margin-top: 20px; font-size: 0.9rem; text-align: center; opacity: 0.9;">
+                    Нажимая кнопку, вы соглашаетесь с обработкой персональных данных
+                </p>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p><strong>Олейникова Юлия Александровна</strong> | ЛОР-хирург</p>
+            <p>МЦ «Гиппократ 21 век», Ростов-на-Дону, 13-я Линия, д. 8</p>
+            <p>Телефон: <a href="tel:+78633339179">+7 (863) 333-91-79</a></p>
+            <p style="margin-top: 20px;">&copy; 2026 Все права защищены</p>
+        </div>
+    </footer>
+
+    <script>
+        // Telegram Bot Configuration
+        const TELEGRAM_BOT_TOKEN = 'YOUR_BOT_TOKEN';
+        const TELEGRAM_CHAT_ID = 'YOUR_CHAT_ID';
+        
+        // Phone mask
+        const phoneInput = document.getElementById('phone');
+        phoneInput.addEventListener('input', function(e) {
+            let x = e.target.value.replace(/\D/g, '').match(/(\d{0,1})(\d{0,3})(\d{0,3})(\d{0,2})(\d{0,2})/);
+            e.target.value = !x[2] ? x[1] : '+7 (' + x[2] + ') ' + x[3] + (x[4] ? '-' + x[4] : '') + (x[5] ? '-' + x[5] : '');
+        });
+        
+        // Form submission
+        document.getElementById('appointmentForm').addEventListener('submit', async function(e) {
+            e.preventDefault();
+            
+            const formMessage = document.getElementById('formMessage');
+            const submitBtn = e.target.querySelector('.submit-btn');
+            
+            const name = document.getElementById('name').value;
+            const phone = document.getElementById('phone').value;
+            const message = document.getElementById('message').value;
+            
+            const telegramMessage = `
+🏥 <b>Новая заявка: Заболевания уха</b>
+
+👤 <b>Имя:</b> ${name}
+📞 <b>Телефон:</b> ${phone}
+💬 <b>Сообщение:</b> ${message || 'Не указано'}
+
+📅 <b>Дата:</b> ${new Date().toLocaleString('ru-RU')}
+            `.trim();
+            
+            submitBtn.disabled = true;
+            submitBtn.textContent = 'Отправка...';
+            
+            try {
+                const response = await fetch(`https://api.telegram.org/bot${TELEGRAM_BOT_TOKEN}/sendMessage`, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({
+                        chat_id: TELEGRAM_CHAT_ID,
+                        text: telegramMessage,
+                        parse_mode: 'HTML'
+                    })
+                });
+                
+                if (response.ok) {
+                    formMessage.className = 'form-message success';
+                    formMessage.textContent = '✓ Заявка отправлена! Я свяжусь с вами в ближайшее время.';
+                    formMessage.style.display = 'block';
+                    e.target.reset();
+                    setTimeout(() => formMessage.style.display = 'none', 5000);
+                } else {
+                    throw new Error('Network error');
+                }
+            } catch (error) {
+                formMessage.className = 'form-message error';
+                formMessage.textContent = '✗ Ошибка. Позвоните: +7 (863) 333-91-79';
+                formMessage.style.display = 'block';
+            } finally {
+                submitBtn.disabled = false;
+                submitBtn.textContent = 'Отправить заявку';
+            }
+        });
+    </script>
+</body>
+</html>
