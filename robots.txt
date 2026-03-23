@@ -1,0 +1,21 @@
+# robots.txt для oleynikova-lor.ru
+
+User-agent: *
+Allow: /
+
+# Карта сайта
+Sitemap: https://oleynikova-lor.ru/sitemap.xml
+
+# Запрещаем индексацию служебных файлов
+Disallow: /README.md
+Disallow: /CHANGELOG.md
+Disallow: /PHOTO-INSTRUCTION.md
+Disallow: /INSTALL-GUIDE.md
+
+# Для Яндекса
+User-agent: Yandex
+Allow: /
+
+# Для Google
+User-agent: Googlebot
+Allow: /
