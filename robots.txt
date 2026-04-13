@@ -1,10 +1,10 @@
-# robots.txt для oleynikova-lor.ru
+# robots.txt для oleynikovalor.ru
 
 User-agent: *
 Allow: /
 
 # Карта сайта
-Sitemap: https://oleynikova-lor.ru/sitemap.xml
+Sitemap: https://oleynikovalor.ru/sitemap.xml
 
 # Запрещаем индексацию служебных файлов
 Disallow: /README.md
