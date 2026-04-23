@@ -4,15 +4,23 @@
   <!-- Главная страница -->
   <url>
     <loc>https://oleynikovalor.ru/</loc>
-    <lastmod>2026-03-06</lastmod>
+    <lastmod>2026-04-23</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
+  </url>
+  
+  <!-- Частые вопросы -->
+  <url>
+    <loc>https://oleynikovalor.ru/faq.html</loc>
+    <lastmod>2026-04-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
   </url>
   
   <!-- Хронические синуситы -->
   <url>
     <loc>https://oleynikovalor.ru/sinusit.html</loc>
-    <lastmod>2026-03-06</lastmod>
+    <lastmod>2026-04-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
@@ -20,7 +28,7 @@
   <!-- Септопластика -->
   <url>
     <loc>https://oleynikovalor.ru/septoplastika.html</loc>
-    <lastmod>2026-03-06</lastmod>
+    <lastmod>2026-04-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
@@ -28,7 +36,7 @@
   <!-- Вазомоторный ринит -->
   <url>
     <loc>https://oleynikovalor.ru/vazomotornyj-rinit.html</loc>
-    <lastmod>2026-03-06</lastmod>
+    <lastmod>2026-04-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
@@ -36,7 +44,7 @@
   <!-- Храп и апноэ -->
   <url>
     <loc>https://oleynikovalor.ru/hrap.html</loc>
-    <lastmod>2026-03-06</lastmod>
+    <lastmod>2026-04-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
@@ -44,7 +52,7 @@
   <!-- ЛОР-стоматология -->
   <url>
     <loc>https://oleynikovalor.ru/odontogennyj-gajmorit.html</loc>
-    <lastmod>2026-03-06</lastmod>
+    <lastmod>2026-04-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
@@ -52,7 +60,7 @@
   <!-- Полипы носа -->
   <url>
     <loc>https://oleynikovalor.ru/polipy-nosa.html</loc>
-    <lastmod>2026-03-06</lastmod>
+    <lastmod>2026-04-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
@@ -60,7 +68,7 @@
   <!-- Заболевания уха -->
   <url>
     <loc>https://oleynikovalor.ru/zabolevaniya-uha.html</loc>
-    <lastmod>2026-03-06</lastmod>
+    <lastmod>2026-04-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
@@ -68,7 +76,7 @@
   <!-- Клинические случаи -->
   <url>
     <loc>https://oleynikovalor.ru/clinical-cases.html</loc>
-    <lastmod>2026-03-06</lastmod>
+    <lastmod>2026-04-23</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
